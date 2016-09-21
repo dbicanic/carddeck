@@ -1,6 +1,6 @@
 class Card
 	include Comparable
-	attr_reader :rank, :suit
+	attr_reader :rank, :suit, :pretty
 
 	def initialize(rank, suit)
 		@rank = rank
@@ -24,5 +24,10 @@ class Card
 
 	def <=>(other)
 		self.rank <=> other.rank
+	end
+
+	def pretty_converter
+		self.face_converter
+		return "#{@rank.to_s} of #{@suit}"
 	end
 end

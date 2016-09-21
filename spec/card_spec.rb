@@ -18,4 +18,12 @@ describe Card do
 	it "compares and returns Ace as higher than 2" do 
 		expect(ace_card > (two_card)).to be true
 	end
+
+	it "prints out a pretty description for ace" do 
+		expect(ace_card.pretty_converter).to eq "Ace of Diamonds"
+	end
+
+	it "prints out a pretty decription for the two" do 
+		expect(two_card.pretty_converter).to eq "2 of Spades"
+	end
 end
