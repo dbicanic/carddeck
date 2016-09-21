@@ -1,13 +1,17 @@
 require_relative "../card"
 
 describe Card do 
-	let(:card) {Card.new(rank: 2, suit: "Spade")}
-
-	it "has a rank of 2" do
-		expect(card.rank).to eq 2
+	let(:two_card) {Card.new(2, "Spade")}
+	let(:ace_card) {Card.new(14, "Diamond")}
+	it "has a rank of 2" do 
+		expect(two_card.rank).to eq 2
 	end
 
 	it "has a suit of Spade" do 
-		expect(card.suit).to eq "Spade"
+		expect(two_card.suit).to eq "Spade"
+	end
+
+	it "has a rank of Ace" do 
+		expect(ace_card.rank).to eq "Ace"
 	end
 end
