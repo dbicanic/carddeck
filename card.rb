@@ -1,13 +1,14 @@
 class Card
+	include Comparable
 	attr_reader :rank, :suit
 
 	def initialize(rank, suit)
-		@rank = face_converter(rank)
+		@rank = rank
 		@suit = suit
 	end
 
-	def face_converter(rank)
-		case rank
+	def face_converter
+		case self.rank
 		when 14
 			@rank = "Ace"
 		when 13
@@ -21,4 +22,7 @@ class Card
 		end
 	end
 
+	def <=>(other)
+		self.rank <=> other.rank
+	end
 end
