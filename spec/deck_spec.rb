@@ -12,4 +12,8 @@ describe Deck do
 		expect(deck.deck).to include(ace_card)
 	end
 
+	it "should be able to split itself" do 
+		expect(deck.deck[0]).to eq(deck.split[26])
+	end
+
 end

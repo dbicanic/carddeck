@@ -18,4 +18,9 @@ class Deck
 		@deck
 	end
 
+	def split
+		@deck.rotate!(26)
+		@deck
+	end
+
 end
