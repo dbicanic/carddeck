@@ -13,11 +13,11 @@ describe Deck do
 	end
 
 	it "should be able to split itself" do 
-		expect(deck.deck[0]).to eq(deck.split[26])
+		expect(deck.deck[0]).to eq(deck.split_deck[26])
 	end
 
 	it "should shuffle deck" do 
-		expect(deck.deck[0]).to_not eq(deck.shuffle[0]) 
+		expect(deck.deck[0]).to_not eq(deck.shuffle_deck[0]) 
 	end
 
 end

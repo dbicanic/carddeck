@@ -18,11 +18,11 @@ class Deck
 		@deck
 	end
 
-	def split
+	def split_deck
 		@deck.rotate!(26)
 	end
 
-	def shuffle
+	def shuffle_deck
 		#Originally this function was just @deck.shuffle! but I wanted to test to make sure it's shuffling, so I built my method around the tests.  I need to ask a better way though.
 		first_card = @deck[1]
 		@deck.shuffle!
