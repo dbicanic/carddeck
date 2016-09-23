@@ -16,4 +16,8 @@ describe Deck do
 		expect(deck.deck[0]).to eq(deck.split[26])
 	end
 
+	it "should shuffle deck" do 
+		expect(deck.deck[0]).to_not eq(deck.shuffle[0]) 
+	end
+
 end
