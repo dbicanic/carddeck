@@ -24,4 +24,13 @@ class War
 		pretty = @hand[0].pretty_converter
 		"Your card is #{pretty}"
 	end
+
+	def winner
+		case @hand[0] > (@hand[1])
+		when true
+			"You won the war!"
+		when false
+			"You lost the war!"
+		end
+	end
 end

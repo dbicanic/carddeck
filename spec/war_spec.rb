@@ -17,6 +17,8 @@ describe War do
 		expect(war_hand.show_card).to be_a(String)
 	end
 
-	# it "declares a winner" do 
-	# end
+	it "declares a winner" do 
+		p war_hand.winner
+		expect(war_hand.winner).to be_a(String)
+	end
 end
