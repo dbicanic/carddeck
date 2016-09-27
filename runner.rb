@@ -6,7 +6,6 @@ puts "This is the Game War.  The concept is simple, you and the computer will dr
 war = War.new
 answer = ""
 until answer == "no" do 
-	war.clear_hand
 	war.draw_two
 	puts "#{war.winner}"
 	puts "#{war.show_card}"

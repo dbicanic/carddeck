@@ -18,6 +18,7 @@ class War
 
 	#Here we draw 2 cards, one for the user, one for the computer
 	def draw_two
+		clear_hand
 		2.times do 
 			@hand << @deck.draw
 		end
