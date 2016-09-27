@@ -27,3 +27,5 @@ describe Card do
 		expect(two_card.pretty_converter).to eq "2 of Spades"
 	end
 end
+
+#Didn't really have any challenges here, all pretty straight forward

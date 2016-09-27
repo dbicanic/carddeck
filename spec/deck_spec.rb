@@ -24,3 +24,5 @@ describe Deck do
 		expect(deck.draw).to be_a(Card)
 	end
 end
+
+#Tests began to get more tricky here, especially with the shuffle function, I worked around it in my method, but it still feels messy
