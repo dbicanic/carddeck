@@ -9,11 +9,12 @@ describe War do
 	end
 
 	it "draws two cards" do 
-		expect(war.draw_two.length).to eq(2)
+		war.draw_two
+		expect(war.hand.length).to eq(2)
 	end
 
 	it "shows the user his/her card" do 
-		expect(war.show_card).to be_a(String)
+		expect(war_hand.show_card).to be_a(String)
 	end
 
 	# it "declares a winner" do 

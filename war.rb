@@ -17,10 +17,11 @@ class War
 		2.times do 
 			@hand << @deck.draw
 		end
-		@hand
+		self 
 	end
 
 	def show_card
-
+		pretty = @hand[0].pretty_converter
+		"Your card is #{pretty}"
 	end
 end
