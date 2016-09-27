@@ -20,4 +20,8 @@ describe War do
 	it "declares a winner" do 
 		expect(war_hand.winner).to be_a(String)
 	end
+
+	it "should clean it's own hand" do 
+		expect(war_hand.clear_hand).to eq([])
+	end
 end
