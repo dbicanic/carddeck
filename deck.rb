@@ -3,7 +3,6 @@ class Deck
 
 	def initialize
 		@deck = create
-		@card = ""
 	end
 
 	def create
@@ -34,7 +33,6 @@ class Deck
 	end
 
 	def draw
-		@card = @deck.slice!(0)
-		@card
+		@deck.slice!(0)
 	end
 end
