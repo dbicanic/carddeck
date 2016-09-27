@@ -1,18 +1,26 @@
 class War
-	attr_reader :game, :deck
+	attr_reader :hand, :deck
 
 	def initialize
-		@game = []
-		@deck = Deck.new
+		@hand = [] 
+		@deck = create_game
 	end 
 
 	def create_game
-		@deck = Deck.new
-		@deck.split_deck
-		@deck.shuffle_deck
+		Deck.new.tap do |deck|
+		  deck.split_deck
+		  deck.shuffle_deck
+		end
 	end
 
 	def draw_two
-		@game
+		2.times do 
+			@hand << @deck.draw
+		end
+		@hand
+	end
+
+	def show_card
+
 	end
 end

@@ -20,4 +20,7 @@ describe Deck do
 		expect(deck.deck[0]).to_not eq(deck.shuffle_deck[0]) 
 	end
 
+	it "draw a card" do
+		expect(deck.draw).to be_a(Card)
+	end
 end
