@@ -21,7 +21,23 @@ describe War do
 		expect(war_hand.winner).to be_a(String)
 	end
 
-	it "should clean it's own hand" do 
+	it "clean it's own hand" do 
 		expect(war_hand.clear_hand).to eq([])
 	end
+
+	it "tell you the score" do 
+		war_hand.winner
+		expect(war_hand.score).to be_a(String)
+	end
+
+	it "tell you if the deck is not empty" do
+		expect(war_hand.cards?).to be_falsey
+	end
+
+	it "tell you the deck is empty" do 
+		26.times{war.draw_two}
+		expect(war.cards?).to be_truthy
+	end
 end
+
+#Here's where I really ran into some difficulties, with all the randomization of the shuffle method, a lot of what I tested was based on if it printed out a string, which doesn't feel right
